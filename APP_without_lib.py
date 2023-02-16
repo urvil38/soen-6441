@@ -66,7 +66,7 @@ print("initial_guess: ", initial_guess)
 a = compute_alpha(initial_guess)
 print("pi: ", pi)
 print("a: ", a)
-print("{:.17f}".format("error:", a - sin(a,N_TERM) - pi/2))
+print("error: {:.17f}".format(a - sin(a,N_TERM) - pi/2))
 radius = int(input("please provide the radius: "))
 
 # # l = 2R(1 – cos(α/2)), 
