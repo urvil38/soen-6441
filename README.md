@@ -58,5 +58,5 @@ python3 ./src/plot.py
 pip install pylint
 
 # invoke the pylint linter on all the .py files as following
-pylint src/**/*.py
+pylint src/*.py
 ```
