@@ -41,7 +41,7 @@ pip install -r requirements.txt
 python3 ./src/main.py
 ```
 
-- Ececute the Cheers project (with using standard library functions)
+- Execute the Cheers project (with using standard library functions)
 ```
 python3 ./src/app_with_lib.py
 ```
