@@ -1,6 +1,5 @@
 from unittest import TestCase
 from libmath import cos, sin, PI, factorial, compute_alpha
-# from main import compute_alpha, INITIAL_CASE
 import math
 
 ACCEPTABLE_ERROR = 0.0001

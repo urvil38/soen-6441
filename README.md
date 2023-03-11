@@ -57,6 +57,12 @@ python3 ./src/app_with_lib.py
 python3 ./src/plot.py
 ```
 
+- Run Unit Tests
+
+```
+pytest
+```
+
 ## Setup Pylint:
 
 - Install pylint using pip: (make sure your python virtual environment is active)
