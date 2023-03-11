@@ -78,9 +78,9 @@ def factorial(n: int) -> int:
         result *= i
     return result
 
-def newton_method(func: Callable[[float], float], 
-                  func_prime: Callable[[float], float], 
-                  x0: float, 
+def newton_method(func: Callable[[float], float],
+                  func_prime: Callable[[float], float],
+                  x0: float,
                   epsilon: float = 0.0001) -> float:
     """
     Compute the value of alpha using Newton's method.
