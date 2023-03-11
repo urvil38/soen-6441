@@ -25,4 +25,4 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Pylint
-      run: pylint $(find src -name "*.py" | xargs)
+      run: pylint libmath.py main.py
