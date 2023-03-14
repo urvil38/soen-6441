@@ -28,7 +28,7 @@ source ./venv/bin/activate
 
 # for Windows
 .\venv\Scripts\activate.bat //In CMD
-.\venv\Scripts\activate.ps1 //In Powershel
+.\venv\Scripts\activate.ps1 //In Powershel pull request
 ```
 
 - Install the dependencies

@@ -1,58 +1,29 @@
-from libmath import cos, sin, PI, newton_method
+from libmath import cos, sin, PI
 
-def func(alpha: float) -> float:
-    """
-    Computes the function f(alpha) = alpha - sin(alpha) - PI/2.
-
-    Args:
-        alpha: A numeric value representing the input for the function.
-
-    Returns:
-        A numeric value representing the output of the function.
-
-    """
+def func(alpha):
     return alpha - sin(alpha) - PI/2
 
-def func_derivative(alpha: float) -> float:
-    """
-    Computes the derivative of the function f(alpha) = alpha - sin(alpha) - PI/2.
-
-    Args:
-        alpha: A numeric value representing the input for the function.
-
-    Returns:
-        A numeric value representing the output of the derivative.
-
-    """
+def func_derivative(alpha):
     return 1 - cos(alpha)
 
-def compute_alpha(initial_guess: float) -> float:
-    """
-    Computes the value of alpha using Newton's method with an initial guess.
-
-    Args:
-        initial_guess: A numeric value representing the initial guess for alpha.
-
-    Returns:
-        A numeric value representing the calculated value of alpha.
-
-    """
-    return newton_method(func, func_derivative, initial_guess)
-
+# The equation "a – sin(a) = π/2" is a transcendental equation,
+# which means that there is no algebraic solution for a in terms of elementary functions.
+# using newton method to to find a numerical solution using iterative method.
+# https://en.wikipedia.org/wiki/Newton%27s_method
+def compute_alpha(guess):
+    for _ in range(100):
+        print(guess)
+        guess -= func(guess)/func_derivative(guess)
+    return guess
 
 # starting with initial guess of 1.
-INITIAL_GUESS = 1
-print("initial_guess: ", INITIAL_GUESS)
-a = compute_alpha(INITIAL_GUESS)
+INITIAL_CASE = 1
+print("initial_guess: ", INITIAL_CASE)
+a = compute_alpha(INITIAL_CASE)
 print("pi: ", PI)
 print("a: ", a)
-
-while True:
-    try:
-        radius = int(input("Please provide the radius: "))
-        break
-    except ValueError:
-        print("Invalid input. Please enter an integer.")
+print("error: {:.17f}".format(a - sin(a) - PI/2))
+radius = int(input("please provide the radius: "))
 
 # l = 2R(1 – cos(α/2))
 l = 2 * radius * (1 - cos(a/2))

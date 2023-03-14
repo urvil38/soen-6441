@@ -1,6 +1,4 @@
 [MAIN]
-disable=
-    C0114, # missing-module-docstring
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
@@ -188,9 +186,7 @@ good-names=i,
            Run,
            _,
            n,
-           x,
-           x1,
-           x0
+           x
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted
