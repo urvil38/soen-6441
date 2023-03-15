@@ -106,10 +106,18 @@ def newton_method(func: Callable[[float], float],
     if epsilon <= 0:
         raise ValueError("epsilon must be a positive numeric value")
 
-    x1 = x0 - func(x0) / func_prime(x0)
+    try:
+        x1 = x0 - func(x0) / func_prime(x0)
+    except ZeroDivisionError:
+        print("ERROR: divide by zero, func_prime cannot be result in zero")
+        return None
 
     while abs(x1 - x0) >= epsilon:
         x0 = x1
-        x1 = x0 - func(x0) / func_prime(x0)
+        try:
+            x1 = x0 - func(x0) / func_prime(x0)
+        except ZeroDivisionError:
+            print("ERROR: divide by zero, func_prime cannot be result in zero")
+            return None
 
     return x1

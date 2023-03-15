@@ -1,0 +1,8 @@
+<!ELEMENT result (input, output)>
+<!ELEMENT input (alpha)>
+<!ELEMENT alpha (#PCDATA)>
+<!ATTLIST alpha initial_guess CDATA #REQUIRED>
+<!ELEMENT output (record*)>
+<!ELEMENT record (radius, length)>
+<!ELEMENT radius (#PCDATA)>
+<!ELEMENT length (#PCDATA)>
