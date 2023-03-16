@@ -39,21 +39,36 @@ pip install -r requirements.txt
 
 ## Run:
 
-- Execute the Cheers project (without using standard library functions)
+Execute the Cheers project (without using standard library functions)
 
+-  Running the program in interactive mode:
+```console
+python3 src/main.py
 ```
-python3 ./src/main.py
+This will start the program in interactive mode, prompting the user for input and displaying the results.
+
+- Generating a CSV file:
+```console
+python3 src/main.py generate csv > output.csv
 ```
+This will generate a CSV file with the results and save it to output.csv.
+
+- Generating an XML file:
+```console
+python3 src/main.py generate xml > output.xml
+```
+This will generate an XML file with the results and save it to output.xml.
+
 
 - Execute the Cheers project (with using standard library functions)
 
-```
+```console
 python3 ./src/app_with_lib.py
 ```
 
 - Plot the cos function
 
-```
+```console
 python3 ./src/plot.py
 ```
 

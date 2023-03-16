@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE result
+  SYSTEM 'cheers.dtd'>
+<result>
+  <input>
+    <alpha initial_guess="1">2.309878472457841</alpha>
+  </input>
+  <output>
+    <record>
+      <radius>12</radius>
+      <length>14.304621125708234</length>
+    </record>
+    <record>
+      <radius>14</radius>
+      <length>16.688724646659608</length>
+    </record>
+    <record>
+      <radius>17</radius>
+      <length>20.264879928086664</length>
+    </record>
+    <record>
+      <radius>23</radius>
+      <length>27.417190490940783</length>
+    </record>
+    <record>
+      <radius>18</radius>
+      <length>21.45693168856235</length>
+    </record>
+    <record>
+      <radius>29</radius>
+      <length>34.5695010537949</length>
+    </record>
+    <record>
+      <radius>34</radius>
+      <length>40.52975985617333</length>
+    </record>
+    <record>
+      <radius>38</radius>
+      <length>45.297966898076076</length>
+    </record>
+    <record>
+      <radius>42</radius>
+      <length>50.06617393997882</length>
+    </record>
+    <record>
+      <radius>41</radius>
+      <length>48.87412217950313</length>
+    </record>
+  </output>
+</result>
