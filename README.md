@@ -7,14 +7,14 @@
 - Install Python 3.x (https://wiki.python.org/moin/BeginnersGuide/Download)
 - Clone the current repository
 
-```
+```console
 git clone https://github.com/urvil38/soen-6441.git
 cd soen-6441
 ```
 
 - Setup virtual enviroment (venv)
 
-```
+```console
 # install virtualenv using pip
 pip install virtualenv
 
@@ -33,7 +33,7 @@ source ./venv/bin/activate
 
 - Install the dependencies
 
-```
+```console
 pip install -r requirements.txt
 ```
 
@@ -76,7 +76,7 @@ python3 ./src/plot.py
 
 - Install pylint using pip: (make sure your python virtual environment is active)
 
-```
+```console
 pip install pylint
 
 # invoke the pylint linter on all the .py files as following
