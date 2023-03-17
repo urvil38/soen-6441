@@ -44,6 +44,12 @@ Execute the Cheers project (without using standard library functions)
 -  Running the program in interactive mode:
 ```console
 python3 src/main.py
+
+# print output in XML format
+python3 src/main.py xml
+
+# print output in CSV format
+python3 src/main.py csv
 ```
 This will start the program in interactive mode, prompting the user for input and displaying the results.
 
