@@ -1,5 +1,6 @@
 import sys
-from libmath import cos, sin, PI, newton_method
+from libmath import cos, sin, PI
+from root_approx import newton_method
 from encoder import generate_xml_response, generate_csv_response
 
 def func(alpha: float) -> float:
