@@ -1,0 +1,47 @@
+\chapter{Introduction}
+
+\section{Objective}
+For CHEERS, we have to calculate segment length \textbf{$L$} between two overlapping coasters for which computation of  the angle with vertex at the
+center of the left circle \textbf{$\alpha$} is necessary. This project has a number of different issues with their unique complications.
+ For this report, we will discuss  the most significant discoveries and how they relate to the CHEERS project will also be highlighted in the report.
+
+\section{Background}
+Through this project we will be able to find optimal length to place two coasters exactly on top of each other. Therefore, the project's utilization of mathematical formulas and ideas is essential. The project specifically uses the following equations for the length of the segment 
+X1X2 and the angle .
+
+$$l = 2R(1 - cos(\frac{\alpha}{2}))$$ 
+where R is radius of coaster
+and alpha is calculated by:
+$$\alpha - sin(\alpha) = \frac{\pi}{2}$$.
+
+\section{Assumptions}
+We have made few assumptions in order to accomplish the project which are as follows:
+
+\begin{enumerate}
+    \item We have used \textbf{11} terms to determine the value of sine and cosine in Taylor series.
+
+\begin{itemize}
+    \item A good equilibrium between accuracy and computational efficiency for values of x between $[−2\pi$, $2\pi]$ is offered by using 11 term in Taylor series expansions for the sine and cosine functions.
+\end{itemize}
+
+\item We are taking 1 as the initial guess for newton’s method.
+\begin{itemize}
+    \item The choice of the initial guess is important because it can affect the convergence of the method. One common choice for the initial guess in the Newton's method is to take it as 1. This choice is often used because it is a simple and convenient value that can work well for many functions. Additionally, 1 is a positive number, which is often helpful since many functions have positive roots.
+    \item However, the choice of the initial guess may also depend on the specific function being evaluated. For some functions, a different initial guess may be more appropriate for faster convergence. Therefore, it is often a good practice to experiment with different initial guesses to find the one that works best for a particular function.
+\end{itemize}
+
+\item We use Newton's technique to get the root of the equation that gives the value of $\alpha$. We made certain assumptions to ensure it works properly.The Newton's method, also referred to as the Newton-Raphson method, is a sequential numerical technique for locating a function's root. 
+They are as follows:
+\begin{itemize}
+    \item An initial guess for the root that is near to the real root is necessary according to the method.
+    \item \textbf{Continuity}: On the interval containing the root we're searching for, the function must be continuous. This indicates that the function has no breaks, leaps, or asymptotes.
+    \item \textbf{Differentiability}: On the range containing the root, the function must be differentiable. This indicates that the function's derivative is present and continuous within this range.
+    \item \textbf{Non-zero Derivative}: The derivative of the function at the initial guess must be non-zero. Otherwise, the method will not converge and may even diverge.
+    \item \textbf{Single Root}: The method can only find one root at a time. If the function has multiple roots, the method needs to be applied separately for each root.These assumptions are important to keep in mind when applying the Newton's method to find the root of a function. Violating any of these assumptions may result in inaccurate or incorrect results.
+\end{itemize} 
+\end{enumerate}
+
+
+
+
+

@@ -1,0 +1,17 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Objective}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Background}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Assumptions}{2}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Problem 1}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Outline of solution}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}CRC Model}{4}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Problem 2}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}sine \small \cite {sin-franklin1974computing}\cite {sin-proakis2007digital}}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}cosine \small \cite {cos-press2007numerical}\cite {cos-abramowitz1964handbook}\cite {cos-marcum1969evaluation}}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Pi \small \cite {pi-rosettacodepi}\cite {pi-weissteinpi}\cite {pi-wikipediapi}}{6}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Alpha}{7}{section.3.4}%
+\contentsline {section}{\numberline {3.5}L}{7}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Problem 3}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Incarnation 1}{8}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Incarnation 2}{10}{section.4.2}%

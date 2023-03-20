@@ -1,0 +1,122 @@
+\chapter{Problem 2}
+
+\section{sine \texorpdfstring{\small \cite{sin-franklin1974computing}\cite{sin-proakis2007digital}}{}}
+There are several methods for computing the sine of an angle which are as follows:
+\begin{itemize}
+    \item Taylor Series
+    \item CORDIC
+    \item Chebyshev Approximation
+    \item Lookup Tables
+    \item Binary Splitting 
+\end{itemize}
+
+\noindent  The choice of method depends on accuracy, speed, and memory usage requirements. The Taylor series\cite{taylor-series} method is a powerful and accurate approach for computing the sine function, especially for small values of the input angle. While the method becomes computationally expensive for larger values of the angle, it remains a viable choice for most applications due to its high accuracy and ease of implementation. Compared to other methods such as CORDIC and lookup table, the Taylor series approach provides a good balance between accuracy and speed. CORDIC is efficient for hardware implementations but less accurate than the Taylor series, while the lookup table is fast but requires significant memory resources to store precomputed values. Ultimately, the choice of method depends on the specific requirements of the application, but the Taylor series method is a reliable and accurate choice for computing sine.
+
+\begin{algorithm}[H]
+\caption{Taylor series expansion for $\sin(x)$}\label{algo:sin}
+\begin{algorithmic}[1]
+\Require{The value of $x$ and the number of terms $n$ to use in the 
+series}
+\Ensure{The approximate value of $\sin(x)$}
+\State{$result \gets 0$}
+\For{$i \gets 0$ to $n-1$}
+\State{$result \gets result + \frac{(-1)^i \times x^{2i+1}}{(2i+1)!}$}
+\EndFor
+\State{\Return $result$}
+\end{algorithmic}
+\end{algorithm}
+
+\section{cosine \texorpdfstring{\small \cite{cos-press2007numerical}\cite{cos-abramowitz1964handbook}\cite{cos-marcum1969evaluation}}{}}
+There are several methods to compute the cosine function, which are as follows:
+\begin{itemize}
+    \item Taylor Series
+    \item CORDIC
+     \item Lookup Tables
+    \item Chebyshev Approximation
+\end{itemize}
+
+\noindent The Taylor series method is considered as one of the most efficient methods for computing cosine, as it balances accuracy and computational efficiency. It uses a series expansion of the cosine function around a specific point, typically zero, to approximate the value of cosine at any point using a finite number of terms in the series. This method is highly useful for small angles where the series converges quickly and provides highly accurate results. However, for larger angles, the number of terms required in the series increases, making it less efficient than other methods such as CORDIC or lookup tables. Nonetheless, it is easy to implement and requires only basic arithmetic operations, making it a popular choice for software-based implementations of cosine.
+
+\begin{algorithm}[H]
+\caption{Taylor series expansion for $\cos(x)$}\label{algo:cos}
+\begin{algorithmic}[1]
+\Require{The value of $x$ and the number of terms $n$ to use in the 
+series}
+\Ensure{The approximate value of $\cos(x)$}
+\State{$result \gets 0$}
+\For{$i \gets 0$ to $n-1$}
+\State{$result \gets result + \frac{(-1)^i \times x^{2i}}{(2i)!}$}
+\EndFor
+\State{\Return $result$}
+\end{algorithmic}
+\end{algorithm}
+
+\section{Pi \texorpdfstring{\small \cite{pi-rosettacodepi}\cite{pi-weissteinpi}\cite{pi-wikipediapi}}{}}
+There are several methods to compute the value of pi, which are as follows:
+\begin{itemize}
+    \item The Leibniz formula
+    \item The Monte Carlo method
+    \item The Bailey-Borwein-Plouffe (BBP) formula
+    \item The Machin formula
+    \item The Chudnovsky algorithm
+\end{itemize}
+
+\noindent The Leibniz formula\cite{pi-leibniz} and other series-based methods, such as the Machin formula, rely on mathematical series and expansions to approximate pi. The Leibniz formula is advantageous due to its simplicity and ease of implementation using basic arithmetic operations. This method also converges quickly and provides accurate approximations with a relatively small number of terms in the series. However, when high precision or many digits is required, more efficient methods like the Chudnovsky algorithm may be preferable. Ultimately, the choice of method depends on factors such as the application's specific requirements, available computational resources, and desired level of precision.
+
+\begin{algorithm}[H]
+\caption{Leibniz formula for $\pi$}\label{algo:leibniz}
+\begin{algorithmic}[1]
+\Require{The number of terms $n_{terms}$ to use in the series}
+\Ensure{The approximate value of $\pi$}
+\State{$val \gets 0$}
+\State{$sign \gets 1$}
+\For{$i \gets 0$ to $n_{terms}-1$}
+\State{$val \gets val + \frac{sign}{2i+1}$}
+\State{$sign \gets -sign$}
+\EndFor
+\State{\Return $val \times 4$}
+\end{algorithmic}
+\end{algorithm}\newpage
+
+\section{Alpha}
+\noindent Newton's method\cite{newton-method} and the bisection method are both numerical techniques used to find the roots of equations. The bisection method is a reliable and straightforward technique that involves repeatedly dividing an interval in half until a root is found. It guarantees convergence to a root, but convergence can be slow, and the function being evaluated must change sign over the interval. Newton's method is a more powerful approach that uses the derivative of the function to iteratively refine an initial guess for the root. It generally converges faster than the bisection method but may fail to converge under certain circumstances. The optimal method for a specific problem depends on the functional properties and the problem requirements.
+
+\begin{algorithm}[H]
+\caption{Newton's Method}\label{algo:newton}
+\begin{algorithmic}[1]
+\Require{A function $f(x)$, its derivative $f'(x)$, an initial guess 
+$x_0$, and a tolerance $\epsilon$}
+\Ensure{An approximation to the root of $f(x)$}
+\State{$x \gets x_0$}
+\While{$|f(x)| > \epsilon$}
+\State{$x \gets x - \frac{f(x)}{f'(x)}$}
+\EndWhile
+\State{\Return $x$}
+\end{algorithmic}
+\end{algorithm}
+
+\section{L}
+Calculate the value of \textbf l, which is the length of an arc of a circle with a given radius and subtended by an angle a (computed using the ``compute\_alpha” function).
+\\
+\\
+The formula for \textbf l is 
+$$l = 2R(1 - cos(\frac{\alpha}{2})),$$
+where R is the radius and $\alpha$ is the angle in radians. 
+The code prompts the user to input the value of radius and then computes \textbf l using the previously computed value of a and the user-provided radius. 
+\\
+\\
+With python math library function:
+First defines a function func which represents the equation 
+$$a - sin(a) = \frac{\pi}{2},$$ 
+where a is the unknown angle. The f\_derivative function computes the derivative of func with respect to a. Then, the compute\_alpha function uses the Newton-Raphson method to find the solution to the equation 
+$$a - sin(a) = \frac{\pi}{2}$$ given an initial guess.
+\\
+\\
+After computing a, the code prompts the user to enter the radius of the circle. It then uses the formula 
+$$l = 2R(1 - cos(\frac{\alpha}{2})),$$  
+to compute the length \textbf l of the circular arc segment and prints the result.
+
+
+
+
+

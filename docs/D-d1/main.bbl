@@ -1,0 +1,62 @@
+\begin{thebibliography}{10}
+
+\bibitem{sin-franklin1974computing}
+Gene~F. Franklin and David~J. Powell.
+\newblock Computing the sine function using the taylor series.
+\newblock {\em Proceedings of the IEEE}, 62(6):1112--1113, 1974.
+
+\bibitem{sin-proakis2007digital}
+John~G. Proakis and Dimitris~G. Manolakis.
+\newblock {\em Digital Signal Processing: Principles, Algorithms, and
+  Applications}.
+\newblock Pearson, Upper Saddle River, NJ, 4th edition, 2007.
+
+\bibitem{cos-press2007numerical}
+William~H. Press, Saul~A. Teukolsky, William~T. Vetterling, and Brian~P.
+  Flannery.
+\newblock {\em Numerical Recipes 3rd Edition: The Art of Scientific Computing}.
+\newblock Cambridge University Press, New York, NY, 3rd edition, 2007.
+
+\bibitem{cos-abramowitz1964handbook}
+Milton Abramowitz and Irene Stegun.
+\newblock {\em Handbook of Mathematical Functions with Formulas, Graphs, and
+  Mathematical Tables}.
+\newblock National Bureau of Standards, Washington, DC, 1964.
+
+\bibitem{cos-marcum1969evaluation}
+S.~A.~M. Marcum.
+\newblock Evaluation of the sine and cosine integrals.
+\newblock {\em Journal of Research of the National Bureau of Standards},
+  73C(1):11--18, 1969.
+
+\bibitem{pi-rosettacodepi}
+Rosetta Code.
+\newblock Methods of computing pi.
+\newblock \url{https://rosettacode.org/wiki/Methods_of_computing_pi}.
+
+\bibitem{pi-weissteinpi}
+Eric~W. Weisstein.
+\newblock Pi formulas.
+\newblock \url{https://mathworld.wolfram.com/PiFormulas.html}.
+
+\bibitem{pi-wikipediapi}
+Wikipedia.
+\newblock Computing pi.
+\newblock \url{https://en.wikipedia.org/wiki/Computing_\%CF\%80}.
+
+\bibitem{taylor-series}
+Wikipedia.
+\newblock Taylor series.
+\newblock \url{https://en.wikipedia.org/wiki/Taylor_series}.
+
+\bibitem{pi-leibniz}
+Proof Wiki.
+\newblock Leibniz's formula for pi.
+\newblock \url{https://proofwiki.org/wiki/Leibniz's_Formula_for_Pi}.
+
+\bibitem{newton-method}
+Wikipedia.
+\newblock Newton's method.
+\newblock \url{https://en.wikipedia.org/wiki/Newton\%27s_method}.
+
+\end{thebibliography}
