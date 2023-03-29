@@ -1,8 +1,7 @@
-from unittest import TestCase
-from libmath import sin, cos, PI, factorial
 import math
-from root_approx import newton_method
-from main import func, func_derivative
+from src.libmath import sin, cos, PI, factorial
+from src.root_approx import newton_method
+from src.main import func, func_derivative
 
 ACCEPTABLE_ERROR = 0.0001
 a = 2.309878472457841
