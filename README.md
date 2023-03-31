@@ -79,7 +79,7 @@ python3 ./src/incarnation_two.py
 pytest --cov -v
 ```
 
-- List out all the available tests():
+- List out all the available tests(this will not execute any tests):
 ```console
 pytest --co -q
 ```
