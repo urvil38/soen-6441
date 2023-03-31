@@ -3,6 +3,7 @@ The module includes function for computing roots of equations using Newton's met
 """
 from typing import Callable
 
+
 def newton_method(func: Callable[[float], float],
                   func_prime: Callable[[float], float],
                   x0: float,
@@ -23,6 +24,9 @@ def newton_method(func: Callable[[float], float],
         ValueError: If `x0` is not a numeric value or if `epsilon` is not a positive numeric value.
 
     """
+
+    num_terms = 100
+
     # Check if x0 is numeric.
     if not isinstance(x0, (int, float)):
         raise ValueError("x0 must be a numeric value")
@@ -31,18 +35,14 @@ def newton_method(func: Callable[[float], float],
     if epsilon <= 0:
         raise ValueError("epsilon must be a positive numeric value")
 
-    try:
-        x1 = x0 - func(x0) / func_prime(x0)
-    except ZeroDivisionError:
-        print("ERROR: divide by zero, func_prime cannot be result in zero")
-        return None
-
-    while abs(x1 - x0) >= epsilon:
+    for _ in range(num_terms):
+        df = func(x0)
+        dfx = func_prime(x0)
+        if dfx == 0:
+            break
+        x1 = x0 - df / dfx
+        if abs(x1 - x0) <= epsilon:
+            return x1
         x0 = x1
-        try:
-            x1 = x0 - func(x0) / func_prime(x0)
-        except ZeroDivisionError:
-            print("ERROR: divide by zero, func_prime cannot be result in zero")
-            return None
 
-    return x1
+    return None

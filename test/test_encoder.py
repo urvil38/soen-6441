@@ -80,7 +80,3 @@ class TestGenerateCSVResponse(unittest.TestCase):
             self.assertEqual(float(row[0]), alpha)
             self.assertEqual(float(row[1]), radius)
             self.assertEqual(float(row[2]), length)
-
-
-if __name__ == '__main__':
-    unittest.main()

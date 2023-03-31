@@ -73,9 +73,9 @@ python3 ./src/app_with_lib.py
 ```
 
 ## Tests
-To run all tests, you can run:
+To run all tests, you can run from the root of the repository:
 ```console
-pytest
+pytest -v
 ```
 
 ## Setup Pylint:
