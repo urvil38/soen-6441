@@ -72,10 +72,10 @@ This will generate an XML file with the results and save it to output.xml.
 python3 ./src/app_with_lib.py
 ```
 
-- Plot the cos function
-
+## Tests
+To run all tests, you can run:
 ```console
-python3 ./src/plot.py
+pytest
 ```
 
 ## Setup Pylint:

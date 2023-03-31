@@ -1,8 +1,8 @@
 import unittest
 import math
-from root_approx import newton_method
-from main import func, func_derivative
-from libmath import sin, cos, value_of_pi, factorial
+from src.libmath import sin, cos, PI, factorial, value_of_pi
+from src.root_approx import newton_method
+from src.main import func, func_derivative
 
 ACCEPTABLE_ERROR = 0.0001
 a = 2.309878472457841

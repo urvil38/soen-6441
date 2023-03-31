@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from main import cos
+from .main import cos
 
 TERM=11
 fn=cos
