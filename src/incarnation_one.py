@@ -53,7 +53,10 @@ def interactive(alpha: float, intital_guess: float, output_type: str) -> None:
     while True:
         try:
             radius = float(input("Please provide the radius: "))
-            break
+            if radius <= 0:
+                print("Invalid input. The radius must be a positive number.")
+            else:
+                break
         except ValueError:
             print("Invalid input. Please enter an integer or float.")
 
