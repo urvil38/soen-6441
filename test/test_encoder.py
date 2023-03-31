@@ -3,7 +3,7 @@ from io import StringIO
 import xml.etree.ElementTree as ET
 import unittest
 from typing import List, Tuple
-from encoder import generate_xml_response, generate_csv_response
+from src.encoder import generate_xml_response, generate_csv_response
 
 
 class TestGenerateXMLResponse(unittest.TestCase):
