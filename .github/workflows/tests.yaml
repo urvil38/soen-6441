@@ -20,4 +20,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run tests
-      run: pytest -v
+      run: pytest --cov -v
+    
+    - name: Update coverage badge
+      run: coverage-badge -o docs/coverage-badge.svg -q -f

@@ -1,6 +1,6 @@
 # soen-6441
-
 [![tests](https://github.com/urvil38/soen-6441/actions/workflows/tests.yaml/badge.svg)](https://github.com/urvil38/soen-6441/actions/workflows/tests.yaml)
+[![coverage](docs/coverage-badge.svg)]()
 [![pylint](https://github.com/urvil38/soen-6441/actions/workflows/pylint.yaml/badge.svg)](https://github.com/urvil38/soen-6441/actions/workflows/pylint.yaml)
 
 ## Setup:
@@ -76,7 +76,7 @@ python3 ./src/incarnation_two.py
 ## Tests
 To run all tests, you can run from the root of the repository:
 ```console
-pytest -v
+pytest --cov -v
 ```
 
 ## Setup Pylint:
