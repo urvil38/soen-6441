@@ -12,7 +12,7 @@ Using 11 terms provides the best trade-off between accuracy and performance for 
 in the range of [-2π, 2π].
 """
 
-def sin(x: float, n: int = 11) -> float:
+def sin(x: float, n: int = N_TERM) -> float:
     """
     Compute the sin function using Taylor series expansion.
 
@@ -28,7 +28,7 @@ def sin(x: float, n: int = 11) -> float:
     return result
 
 
-def cos(x: float, n: int = 11) -> float:
+def cos(x: float, n: int = N_TERM) -> float:
     """
     Compute the cos function using Taylor series expansion.
 

@@ -1,35 +1,7 @@
 import sys
-from libmath import cos, sin, PI
-from root_approx import newton_method
-from encoder import generate_xml_response, generate_csv_response
-
-def func(alpha: float) -> float:
-    """
-    Computes the function f(alpha) = alpha - sin(alpha) - PI/2.
-
-    Args:
-        alpha: A numeric value representing the input for the function.
-
-    Returns:
-        A numeric value representing the output of the function.
-
-    """
-    return alpha - sin(alpha) - PI/2
-
-
-def func_derivative(alpha: float) -> float:
-    """
-    Computes the derivative of the function f(alpha) = alpha - sin(alpha) - PI/2.
-
-    Args:
-        alpha: A numeric value representing the input for the function.
-
-    Returns:
-        A numeric value representing the output of the derivative.
-
-    """
-    return 1 - cos(alpha)
-
+import libmath
+import root_approx
+import encoder
 
 def compute_alpha(initial_guess: float) -> float:
     """
@@ -42,8 +14,13 @@ def compute_alpha(initial_guess: float) -> float:
         A numeric value representing the calculated value of alpha.
 
     """
-    return newton_method(func, func_derivative, initial_guess)
+    def func(alpha: float) -> float:
+        return alpha - libmath.sin(alpha) - libmath.PI/2
 
+    def func_derivative(alpha: float) -> float:
+        return 1 - libmath.cos(alpha)
+
+    return root_approx.newton_method(func, func_derivative, initial_guess)
 
 def compute_length(radius: float, alpha: float) -> float:
     """
@@ -57,7 +34,7 @@ def compute_length(radius: float, alpha: float) -> float:
         A float representing the length of the arc.
 
     """
-    return 2 * radius * (1 - cos(alpha/2))
+    return 2 * radius * (1 - libmath.cos(alpha/2))
 
 
 def interactive(alpha: float, intital_guess: float, output_type: str) -> None:
@@ -85,16 +62,16 @@ def interactive(alpha: float, intital_guess: float, output_type: str) -> None:
 
     record = [(radius, length)]
     if output_type == "csv":
-        print(generate_csv_response(alpha, record), end='')
+        print(encoder.generate_csv_response(alpha, record), end='')
     elif output_type == "xml":
-        print(generate_xml_response(intital_guess, alpha, record), end='')
+        print(encoder.generate_xml_response(intital_guess, alpha, record), end='')
     else:
         print('alpha:  {}'.format(alpha))
         print('radius: {}'.format(radius))
         print('length: {}'.format(length))
 
 
-if __name__ == "__main__":
+def main() -> None:
     # starting with initial guess of 1.
     INITIAL_GUESS = 1
     argv = sys.argv
@@ -112,11 +89,14 @@ if __name__ == "__main__":
             records.append((radius, compute_length(radius, alpha)))
 
         if argv[2] == "xml":
-            print(generate_xml_response(INITIAL_GUESS, alpha, records), end='')
+            print(encoder.generate_xml_response(INITIAL_GUESS, alpha, records), end='')
         elif argv[2] == "csv":
-            print(generate_csv_response(alpha, records), end='')
+            print(encoder.generate_csv_response(alpha, records), end='')
     else:
         OUTPUT_TYPE = None
         if len(argv) > 1:
             OUTPUT_TYPE = argv[1]
         interactive(alpha, INITIAL_GUESS, OUTPUT_TYPE)
+
+if __name__ == "__main__":
+    main()

@@ -1,13 +1,9 @@
-name: pylint
+name: tests
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
 
 jobs:
-  pylint:
+  pytest:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,8 +17,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pylint
         pip install -r requirements.txt
 
-    - name: Run Pylint
-      run: pylint src/*.py
+    - name: Run tests
+      run: pytest --cov -v
+    
+    - name: Update coverage badge
+      run: coverage-badge -o docs/coverage-badge.svg -q -f
