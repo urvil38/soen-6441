@@ -74,18 +74,14 @@ python3 ./src/incarnation_two.py
 ```
 
 ## Tests
-To run all tests, you can run from the root of the repository:
+Run the following command from the root of the repository to execute all the tests:
 ```console
 pytest --cov -v
 ```
 
-## Setup Pylint:
-
-- Install pylint using pip: (make sure your python virtual environment is active)
+## Run Pylint:
 
 ```console
-pip install pylint
-
 # invoke the pylint linter on all the .py files as following
 pylint src/*.py
 ```

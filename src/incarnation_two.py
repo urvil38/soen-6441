@@ -3,34 +3,6 @@ import math
 import root_approx
 import encoder
 
-def func(alpha: float) -> float:
-    """
-    Computes the function f(alpha) = alpha - math.sin(alpha) - math.pi/2.
-
-    Args:
-        alpha: A numeric value representing the input for the function.
-
-    Returns:
-        A numeric value representing the output of the function.
-
-    """
-    return alpha - math.sin(alpha) - math.pi/2
-
-
-def func_derivative(alpha: float) -> float:
-    """
-    Computes the derivative of the function f(alpha) = alpha - math.sin(alpha) - math.pi/2.
-
-    Args:
-        alpha: A numeric value representing the input for the function.
-
-    Returns:
-        A numeric value representing the output of the derivative.
-
-    """
-    return 1 - math.cos(alpha)
-
-
 def compute_alpha(initial_guess: float) -> float:
     """
     Computes the value of alpha using Newton's method with an initial guess.
@@ -42,6 +14,12 @@ def compute_alpha(initial_guess: float) -> float:
         A numeric value representing the calculated value of alpha.
 
     """
+    def func(alpha: float) -> float:
+        return alpha - math.sin(alpha) - math.pi/2
+
+    def func_derivative(alpha: float) -> float:
+        return 1 - math.cos(alpha)
+
     return root_approx.newton_method(func, func_derivative, initial_guess)
 
 
