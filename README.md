@@ -1,6 +1,7 @@
 # soen-6441
 
-[![Pylint](https://github.com/urvil38/soen-6441/actions/workflows/pylint.yaml/badge.svg)](https://github.com/urvil38/soen-6441/actions/workflows/pylint.yaml)
+[![tests](https://github.com/urvil38/soen-6441/actions/workflows/tests.yaml/badge.svg)](https://github.com/urvil38/soen-6441/actions/workflows/tests.yaml)
+[![pylint](https://github.com/urvil38/soen-6441/actions/workflows/pylint.yaml/badge.svg)](https://github.com/urvil38/soen-6441/actions/workflows/pylint.yaml)
 
 ## Setup:
 
@@ -43,25 +44,25 @@ Execute the Cheers project (without using standard library functions)
 
 -  Running the program in interactive mode:
 ```console
-python3 src/main.py
+python3 src/incarnation_one.py
 
 # print output in XML format
-python3 src/main.py xml
+python3 src/incarnation_one.py xml
 
 # print output in CSV format
-python3 src/main.py csv
+python3 src/incarnation_one.py csv
 ```
 This will start the program in interactive mode, prompting the user for input and displaying the results.
 
 - Generating a CSV file:
 ```console
-python3 src/main.py generate csv > output.csv
+python3 src/incarnation_one.py generate csv > output.csv
 ```
 This will generate a CSV file with the results and save it to output.csv.
 
 - Generating an XML file:
 ```console
-python3 src/main.py generate xml > output.xml
+python3 src/incarnation_one.py generate xml > output.xml
 ```
 This will generate an XML file with the results and save it to output.xml.
 
@@ -69,7 +70,7 @@ This will generate an XML file with the results and save it to output.xml.
 - Execute the Cheers project (with using standard library functions)
 
 ```console
-python3 ./src/app_with_lib.py
+python3 ./src/incarnation_two.py
 ```
 
 ## Tests

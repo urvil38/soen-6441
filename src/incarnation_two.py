@@ -1,11 +1,11 @@
 import sys
-import src.libmath as libmath
-import src.root_approx as root_approx
-import src.encoder as encoder
+import math
+import root_approx
+import encoder
 
 def func(alpha: float) -> float:
     """
-    Computes the function f(alpha) = alpha - sin(alpha) - PI/2.
+    Computes the function f(alpha) = alpha - math.sin(alpha) - math.pi/2.
 
     Args:
         alpha: A numeric value representing the input for the function.
@@ -14,12 +14,12 @@ def func(alpha: float) -> float:
         A numeric value representing the output of the function.
 
     """
-    return alpha - libmath.sin(alpha) - libmath.PI/2
+    return alpha - math.sin(alpha) - math.pi/2
 
 
 def func_derivative(alpha: float) -> float:
     """
-    Computes the derivative of the function f(alpha) = alpha - sin(alpha) - PI/2.
+    Computes the derivative of the function f(alpha) = alpha - math.sin(alpha) - math.pi/2.
 
     Args:
         alpha: A numeric value representing the input for the function.
@@ -28,7 +28,7 @@ def func_derivative(alpha: float) -> float:
         A numeric value representing the output of the derivative.
 
     """
-    return 1 - libmath.cos(alpha)
+    return 1 - math.cos(alpha)
 
 
 def compute_alpha(initial_guess: float) -> float:
@@ -57,7 +57,7 @@ def compute_length(radius: float, alpha: float) -> float:
         A float representing the length of the arc.
 
     """
-    return 2 * radius * (1 - libmath.cos(alpha/2))
+    return 2 * radius * (1 - math.cos(alpha/2))
 
 
 def interactive(alpha: float, intital_guess: float, output_type: str) -> None:
@@ -94,7 +94,7 @@ def interactive(alpha: float, intital_guess: float, output_type: str) -> None:
         print('length: {}'.format(length))
 
 
-if __name__ == "__main__":
+def main() -> None:
     # starting with initial guess of 1.
     INITIAL_GUESS = 1
     argv = sys.argv
@@ -120,3 +120,6 @@ if __name__ == "__main__":
         if len(argv) > 1:
             OUTPUT_TYPE = argv[1]
         interactive(alpha, INITIAL_GUESS, OUTPUT_TYPE)
+
+if __name__ == "__main__":
+    main()

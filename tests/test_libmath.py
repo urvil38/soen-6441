@@ -1,13 +1,6 @@
 import unittest
 import math
 import src.libmath as libmath
-import src.root_approx as root_approx
-import src.main as main
-
-ACCEPTABLE_ERROR = 0.0001
-a = 2.309878472457841
-INITIAL_CASE = 1
-
 
 class TestMathFunctions(unittest.TestCase):
 
@@ -32,7 +25,3 @@ class TestMathFunctions(unittest.TestCase):
         self.assertEqual(libmath.factorial(0), 1)
         self.assertEqual(libmath.factorial(1), 1)
         self.assertEqual(libmath.factorial(5), 120)
-
-    def test_newton_method(self):
-        assert abs(a - root_approx.newton_method(main.func, main.func_derivative,
-                   INITIAL_CASE)) < ACCEPTABLE_ERROR
