@@ -73,10 +73,22 @@ This will generate an XML file with the results and save it to output.xml.
 python3 ./src/incarnation_two.py
 ```
 
-## Tests
-Run the following command from the root of the repository to execute all the tests:
+## Tests:
+- Run the following command from the root of the repository to execute all the tests:
 ```console
 pytest --cov -v
+```
+
+- List out all the available tests():
+```console
+pytest --co -q
+```
+
+- If you want to run individual test, provide test function name in the `-k` argument of the `pytest` command as following:
+```console
+# execute only run test_generate_xml_response test
+
+pytest -v -k test_generate_xml_response
 ```
 
 ## Run Pylint:
@@ -84,4 +96,10 @@ pytest --cov -v
 ```console
 # invoke the pylint linter on all the .py files as following
 pylint src/*.py
+```
+
+## How to deactivate virtualenv?
+Just execute following command to deactivate the virtualenv:
+```console
+deactivate
 ```
