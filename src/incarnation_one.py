@@ -52,10 +52,10 @@ def interactive(alpha: float, intital_guess: float, output_type: str) -> None:
     """
     while True:
         try:
-            radius = int(input("Please provide the radius: "))
+            radius = float(input("Please provide the radius: "))
             break
         except ValueError:
-            print("Invalid input. Please enter an integer.")
+            print("Invalid input. Please enter an integer or float.")
 
     # l = 2R(1 – cos(α/2))
     length = compute_length(radius, alpha)
